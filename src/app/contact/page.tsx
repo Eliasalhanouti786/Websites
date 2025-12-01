@@ -7,15 +7,18 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div>
-            <h1 className="text-5xl font-bold mb-6 text-gray-900">Get in Touch</h1>
+            <h1 className="text-5xl font-bold mb-6 text-gray-900">
+              Get in Touch
+            </h1>
             <p className="text-xl text-gray-600 mb-12">
-              Ready to start your next project? Reach out to Eamonn and the AMEX team 
-              for a free consultation and project quote.
+              {`Ready to start your next project? Reach out to Eamonn and the AMEX team for a free consultation and project quote.`}
             </p>
 
             <div className="space-y-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Email
+                </h3>
                 <a
                   href="mailto:ayman@amexconstruction.co.uk"
                   className="text-red-700 hover:text-red-800 text-lg"
@@ -25,7 +28,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Phone
+                </h3>
                 <a
                   href="tel:+441234567890"
                   className="text-red-700 hover:text-red-800 text-lg"
@@ -35,7 +40,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Location
+                </h3>
                 <p className="text-gray-700">Manchester, UK</p>
               </div>
 
@@ -44,7 +51,7 @@ export default function Contact() {
                   Typical Response Time
                 </h3>
                 <p className="text-gray-700">
-                  We'll respond to your inquiry within 24 hours during business days.
+                  {`We'll respond to your inquiry within 24 hours during business days.`}
                 </p>
               </div>
             </div>

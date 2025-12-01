@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 
@@ -56,7 +56,7 @@ export default function ContactForm() {
             Thank You!
           </h3>
           <p className="text-green-700">
-            We'll be in touch within 24 hours to discuss your project.
+            {`We'll be in touch within 24 hours to discuss your project.`}
           </p>
         </div>
       ) : (
