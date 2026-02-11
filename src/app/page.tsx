@@ -116,7 +116,7 @@ export default function Home() {
               
               <p className="text-xl text-gray-300 leading-relaxed opacity-0 animate-fade-in-up max-w-xl" style={{animationDelay: '0.4s'}}>
                 Transforming spaces with premium design and meticulous craftsmanship. 
-                Led by Eamonn, bringing 25+ years of expertise in architecture, design, and sustainable construction.
+                Bringing 25+ years of expertise in architecture, design, and sustainable construction.
               </p>
 
               <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up pt-4" style={{animationDelay: '0.6s'}}>

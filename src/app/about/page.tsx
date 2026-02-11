@@ -8,12 +8,12 @@ export default function About() {
         {/* Page Title */}
         <h1 className="text-5xl font-bold mb-12 text-gray-900">About Us</h1>
 
-        {/* Eamonn Profile Section */}
+        {/* Profile Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <Image
               src="/images/ayman.jpg"
-              alt="Eamonn"
+              alt="Lead Designer"
               width={400}
               height={500}
               className="rounded-lg shadow-xl object-cover w-full h-auto"
@@ -21,26 +21,31 @@ export default function About() {
             />
           </div>
           <div>
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Eamonn</h2>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
+              Lead Designer & Project Manager
+            </h2>
             <p className="text-xl text-red-700 font-semibold mb-6">
-              Lead Designer & Project Manager, AMEX Construction and
-              Developments Limited
+              AMEX Construction and Developments Limited
             </p>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              With a PhD in Environmental Management & Sustainability and over
+              With a PhD in Environmental and Sustainability Management and over
               25 years of professional experience in architecture, design, and
-              construction management, Eamonn brings unparalleled expertise to
-              every project. His vision is to create spaces that combine
-              aesthetic excellence with sustainable, practical design.
+              construction management, our lead designer brings unparalleled
+              expertise to every project. The vision is to create spaces that
+              combine aesthetic excellence with sustainable, practical design.
             </p>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              {`Eamonn's career spans prestigious international positions including Senior Architect & Design Team Leader at Arenco Consultants in the UAE, and currently as Lecturer in Construction Management at GBS Manchester and Bath Spa University. His meticulous attention to detail, innovative problem-solving approach, and commitment to client satisfaction have made AMEX Construction the trusted choice for premium residential and commercial projects.`}
+              Currently serving as a Lecturer at GBS, our lead designer combines
+              academic expertise with hands-on construction experience.
+              Meticulous attention to detail, innovative problem-solving, and
+              commitment to client satisfaction have made AMEX Construction the
+              trusted choice for premium residential and commercial projects.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              {`Every project reflects his personal vision—from initial concept through final execution. He doesn't just build spaces; he creates environments where functionality meets elegance, where sustainability meets luxury, and where his clients' dreams become reality.`}
+              {`Every project reflects a personal vision—from initial concept through final execution. We don't just build spaces; we create environments where functionality meets elegance, where sustainability meets luxury, and where our clients' dreams become reality.`}
             </p>
           </div>
         </div>
@@ -58,27 +63,18 @@ export default function About() {
               <ul className="space-y-4 text-gray-700">
                 <li className="border-l-4 border-red-700 pl-4">
                   <span className="font-semibold">
-                    Ph.D. in Environmental Management & Sustainability
+                    Ph.D. in Environmental and Sustainability Management
                   </span>
-                  <p className="text-sm text-gray-600">
-                    University of Greater Manchester, 2023
-                  </p>
                 </li>
                 <li className="border-l-4 border-red-700 pl-4">
                   <span className="font-semibold">
                     MSc in Construction Project Management
                   </span>
-                  <p className="text-sm text-gray-600">
-                    University of Greater Manchester, 2017
-                  </p>
                 </li>
                 <li className="border-l-4 border-red-700 pl-4">
                   <span className="font-semibold">
                     BSc in Architecture Engineering
                   </span>
-                  <p className="text-sm text-gray-600">
-                    University of Technology – Iraq, 1999
-                  </p>
                 </li>
               </ul>
             </div>
@@ -90,21 +86,19 @@ export default function About() {
                 <li className="border-l-4 border-blue-900 pl-4">
                   <span className="font-semibold">MIEnvSc</span>
                   <p className="text-sm text-gray-600">
-                    Institution of Environmental Sciences UK (Member No. 78262)
+                    Institution of Environmental Sciences UK
                   </p>
                 </li>
                 <li className="border-l-4 border-blue-900 pl-4">
                   <span className="font-semibold">ACIAT</span>
                   <p className="text-sm text-gray-600">
                     Chartered Institute of Architectural Technologists UK
-                    (Member No. 031238)
                   </p>
                 </li>
                 <li className="border-l-4 border-blue-900 pl-4">
                   <span className="font-semibold">PBRS & PVRS</span>
                   <p className="text-sm text-gray-600">
-                    Pearl Qualified Professional - Estidama Abu Dhabi Green
-                    Building Rating System
+                    Pearl Qualified Professional
                   </p>
                 </li>
               </ul>
@@ -185,53 +179,11 @@ export default function About() {
           </div>
         </div>
 
-        {/* Experience Highlight */}
-        <div className="border-l-4 border-red-700 pl-8 mb-20">
-          <h3 className="text-3xl font-bold mb-6 text-gray-900">
-            Professional Experience
-          </h3>
-          <div className="space-y-6">
-            <div>
-              <h4 className="text-xl font-semibold text-gray-900">
-                Current Positions
-              </h4>
-              <p className="text-gray-700 mt-2">
-                Lecturer in Construction Management at GBS Manchester & Bath Spa
-                University (2024-present) • VHT Lecturer at School of
-                Engineering, University of Greater Manchester (2023-present)
-              </p>
-            </div>
-            <div>
-              <h4 className="text-xl font-semibold text-gray-900">
-                International Experience
-              </h4>
-              <p className="text-gray-700 mt-2">
-                Senior Architect & Design Team Leader at Arenco Consultants, UAE
-                (2005-2013) - managing multi-commercial and residential projects
-                across Abu Dhabi and Gulf region • Architect Designer at Euro
-                Engineering Consultancy, UAE (2002-2005)
-              </p>
-            </div>
-            <div>
-              <h4 className="text-xl font-semibold text-gray-900">
-                Research & Publications
-              </h4>
-              <p className="text-gray-700 mt-2">
-                Published researcher on sustainable construction and green
-                building initiatives in the Gulf region • Official Reviewer for
-                Journal of Civil, Construction and Environmental Engineering •
-                Invited speaker at international conferences including ICSEWEN
-                2023 in Doha
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Company Mission */}
         <div className="text-center bg-blue-900 text-white p-12 rounded-lg">
           <h3 className="text-3xl font-bold mb-6">Our Mission</h3>
           <p className="text-xl leading-relaxed max-w-3xl mx-auto">
-            {`At AMEX Construction and Developments Limited, we believe every space has untapped potential. Led by Eamonn's vision and expertise, our mission is to unlock that potential through expertly informed design, meticulous craftsmanship, sustainable practices, and personalized service. We transform buildings into homes and workspaces that reflect our clients' values and aspirations.`}
+            {`At AMEX Construction and Developments Limited, we believe every space has untapped potential. Our mission is to unlock that potential through expertly informed design, meticulous craftsmanship, sustainable practices, and personalized service. We transform buildings into homes and workspaces that reflect our clients' values and aspirations.`}
           </p>
         </div>
       </div>
