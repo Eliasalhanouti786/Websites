@@ -11,7 +11,8 @@ export default function ContactForm() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -27,12 +28,22 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // For now, just show success message
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
+    setStatus("sending");
+    setErrorMessage("");
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      setStatus("success");
       setFormData({
         name: "",
         email: "",
@@ -40,8 +51,14 @@ export default function ContactForm() {
         projectType: "",
         message: "",
       });
-      setSubmitted(false);
-    }, 3000);
+
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(
+        err instanceof Error ? err.message : "Failed to send. Please try again."
+      );
+    }
   };
 
   return (
@@ -50,7 +67,7 @@ export default function ContactForm() {
         Request a Consultation
       </h2>
 
-      {submitted ? (
+      {status === "success" ? (
         <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
           <h3 className="text-xl font-semibold text-green-800 mb-2">
             Thank You!
@@ -61,6 +78,12 @@ export default function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
+          {status === "error" && (
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
+              {errorMessage}
+            </div>
+          )}
+
           <div>
             <label className="block text-sm font-semibold text-gray-900 mb-2">
               Full Name *
@@ -143,9 +166,10 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 rounded-lg transition"
+            disabled={status === "sending"}
+            className="w-full bg-red-700 hover:bg-red-800 disabled:bg-red-400 text-white font-semibold py-3 rounded-lg transition"
           >
-            Send Inquiry
+            {status === "sending" ? "Sending..." : "Send Inquiry"}
           </button>
 
           <p className="text-sm text-gray-500 text-center">
