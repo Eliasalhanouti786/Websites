@@ -48,18 +48,18 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:ayman@amexconstruction.co.uk"
+                  href="mailto:Eamonn@amexltd.co.uk"
                   className="hover:text-white transition"
                 >
-                  ayman@amexconstruction.co.uk
+                  Eamonn@amexltd.co.uk
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+441234567890"
+                  href="tel:+447449397233"
                   className="hover:text-white transition"
                 >
-                  +44 (0) 123 456 7890
+                  +44 7449 397233
                 </a>
               </li>
               <li className="text-gray-400">Manchester, UK</li>

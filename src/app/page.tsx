@@ -98,69 +98,69 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero-gradient relative min-h-screen flex items-center overflow-hidden">
+      <section className="hero-gradient relative min-h-[80vh] md:min-h-screen flex items-center overflow-hidden py-12 md:py-0">
         {/* Animated Background Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-red-700 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '0s'}}></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-900 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-red-600 opacity-10 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
+        <div className="absolute top-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-red-700 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '0s'}}></div>
+        <div className="absolute bottom-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-blue-900 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-36 md:w-72 h-36 md:h-72 bg-red-600 opacity-10 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div className="space-y-4 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <h1 className="text-6xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
                   Expert Design & Full Home Refurbishment
                 </h1>
               </div>
-              
-              <p className="text-xl text-gray-300 leading-relaxed opacity-0 animate-fade-in-up max-w-xl" style={{animationDelay: '0.4s'}}>
-                Transforming spaces with premium design and meticulous craftsmanship. 
+
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed opacity-0 animate-fade-in-up max-w-xl" style={{animationDelay: '0.4s'}}>
+                Transforming spaces with premium design and meticulous craftsmanship.
                 Bringing 25+ years of expertise in architecture, design, and sustainable construction.
               </p>
 
-              <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up pt-4" style={{animationDelay: '0.6s'}}>
+              <div className="flex flex-wrap gap-3 md:gap-4 opacity-0 animate-fade-in-up pt-2 md:pt-4" style={{animationDelay: '0.6s'}}>
                 <Link
                   href="/portfolio"
-                  className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
+                  className="bg-red-700 hover:bg-red-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm md:text-base"
                 >
                   View All Projects
                 </Link>
                 <Link
                   href="/contact"
-                  className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
+                  className="bg-white hover:bg-gray-100 text-gray-900 px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm md:text-base"
                 >
                   Get in Touch
                 </Link>
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex gap-8 pt-8 opacity-0 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-                <div className="border-l-4 border-red-700 pl-4">
-                  <p className="text-2xl font-bold text-white">25+</p>
-                  <p className="text-gray-400 text-sm">Years Experience</p>
+              <div className="flex gap-6 md:gap-8 pt-4 md:pt-8 opacity-0 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+                <div className="border-l-4 border-red-700 pl-3 md:pl-4">
+                  <p className="text-xl md:text-2xl font-bold text-white">25+</p>
+                  <p className="text-gray-400 text-xs md:text-sm">Years Experience</p>
                 </div>
-                <div className="border-l-4 border-red-700 pl-4">
-                  <p className="text-2xl font-bold text-white">100+</p>
-                  <p className="text-gray-400 text-sm">Projects Completed</p>
+                <div className="border-l-4 border-red-700 pl-3 md:pl-4">
+                  <p className="text-xl md:text-2xl font-bold text-white">100+</p>
+                  <p className="text-gray-400 text-xs md:text-sm">Projects Completed</p>
                 </div>
               </div>
             </div>
 
             {/* Right Carousel Section */}
-            <div className="relative opacity-0 animate-slide-in-right" style={{animationDelay: '0.5s'}}>
+            <div className="relative opacity-0 animate-slide-in-right mt-4 md:mt-0" style={{animationDelay: '0.5s'}}>
               <div className="relative">
                 {/* Glowing Border Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-xl blur opacity-30 animate-glow"></div>
-                
+
                 {/* Carousel Container */}
-                <div className="relative bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden p-6">
+                <div className="relative bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden p-3 md:p-6">
                   <Carousel images={showcaseProjects} />
                 </div>
               </div>
 
               {/* Floating Stats */}
-              <div className="absolute -bottom-6 -left-6 bg-red-700 rounded-lg p-4 shadow-2xl animate-float" style={{animationDelay: '1s'}}>
+              <div className="hidden md:block absolute -bottom-6 -left-6 bg-red-700 rounded-lg p-4 shadow-2xl animate-float" style={{animationDelay: '1s'}}>
                 <p className="text-white font-bold">Premium Quality</p>
                 <p className="text-red-100 text-sm">Certified & Insured</p>
               </div>
@@ -170,17 +170,17 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-white relative overflow-hidden">
         {/* Subtle background shapes */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-red-50 rounded-full blur-3xl opacity-30 -z-10"></div>
-        
+        <div className="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-red-50 rounded-full blur-3xl opacity-30 -z-10"></div>
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-gray-900 to-red-700 bg-clip-text text-transparent">Our Services</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Comprehensive construction and design solutions tailored to your vision</p>
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-black mb-3 md:mb-4 bg-gradient-to-r from-gray-900 to-red-700 bg-clip-text text-transparent">Our Services</h2>
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">Comprehensive construction and design solutions tailored to your vision</p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {[
               { title: "Full House Refurbishments", desc: "Complete renovation and modernization of residential spaces", icon: "🏠" },
               { title: "Extensions & Redesigns", desc: "Expand your home with expertly designed extensions", icon: "🔨" },
@@ -189,13 +189,13 @@ export default function Home() {
               { title: "Planning Permissions", desc: "Expert guidance through planning applications and regulatory compliance", icon: "📋" },
               { title: "Interior Design", desc: "Space optimization and elegant design solutions", icon: "✨" },
             ].map((service, idx) => (
-              <div 
-                key={idx} 
-                className="group p-8 border border-gray-200 rounded-xl hover:shadow-xl hover:border-red-700 transition duration-300 transform hover:scale-105 cursor-pointer bg-white"
+              <div
+                key={idx}
+                className="group p-4 md:p-8 border border-gray-200 rounded-xl hover:shadow-xl hover:border-red-700 transition duration-300 transform hover:scale-105 cursor-pointer bg-white"
               >
-                <div className="text-4xl mb-4 group-hover:scale-125 transition duration-300">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-red-700 transition">{service.title}</h3>
-                <p className="text-gray-600 group-hover:text-gray-700 transition">{service.desc}</p>
+                <div className="text-3xl md:text-4xl mb-3 md:mb-4 group-hover:scale-125 transition duration-300">{service.icon}</div>
+                <h3 className="text-base md:text-xl font-bold mb-2 md:mb-3 text-gray-900 group-hover:text-red-700 transition">{service.title}</h3>
+                <p className="text-gray-600 group-hover:text-gray-700 transition text-sm md:text-base">{service.desc}</p>
               </div>
             ))}
           </div>
@@ -203,18 +203,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12 md:py-20 relative overflow-hidden">
         {/* Animated background elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-red-700 opacity-10 rounded-full blur-3xl animate-float"></div>
-        
+        <div className="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-red-700 opacity-10 rounded-full blur-3xl animate-float"></div>
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">Ready to Transform Your Space?</h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-black mb-3 md:mb-4">Ready to Transform Your Space?</h2>
+          <p className="text-base md:text-xl mb-6 md:mb-8 text-blue-100 max-w-2xl mx-auto">
             Get a free consultation and quote from our design team
           </p>
           <Link
             href="/contact"
-            className="bg-red-700 hover:bg-red-800 text-white px-10 py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl inline-block shadow-lg"
+            className="bg-red-700 hover:bg-red-800 text-white px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl inline-block shadow-lg text-sm md:text-base"
           >
             Schedule Consultation
           </Link>

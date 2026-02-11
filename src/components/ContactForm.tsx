@@ -101,7 +101,7 @@ export default function ContactForm() {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
-              placeholder="+44 (0) 123 456 7890"
+              placeholder="+44 7449 397233"
             />
           </div>
 
