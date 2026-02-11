@@ -98,44 +98,44 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero-gradient relative min-h-[80vh] md:min-h-screen flex items-center overflow-x-hidden overflow-y-hidden py-12 md:py-0">
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-red-700 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '0s'}}></div>
-        <div className="absolute bottom-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-blue-900 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 right-1/4 w-36 md:w-72 h-36 md:h-72 bg-red-600 opacity-10 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
+      <section className="hero-gradient relative min-h-[80vh] md:min-h-screen flex items-center overflow-hidden py-12 md:py-0">
+        {/* Animated Background Elements - hidden on mobile to prevent overflow */}
+        <div className="hidden md:block absolute top-0 left-0 w-96 h-96 bg-red-700 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '0s'}}></div>
+        <div className="hidden md:block absolute bottom-0 right-0 w-96 h-96 bg-blue-900 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="hidden md:block absolute top-1/2 right-1/4 w-72 h-72 bg-red-600 opacity-10 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
             {/* Left Content */}
-            <div className="space-y-6 md:space-y-8">
-              <div className="space-y-4 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <h1 className="text-3xl sm:text-5xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
+            <div className="space-y-4 md:space-y-8">
+              <div className="opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                <h1 className="text-2xl sm:text-4xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
                   Expert Design & Full Home Refurbishment
                 </h1>
               </div>
 
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed opacity-0 animate-fade-in-up max-w-xl" style={{animationDelay: '0.4s'}}>
+              <p className="text-sm sm:text-base md:text-xl text-gray-300 leading-relaxed opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                 Transforming spaces with premium design and meticulous craftsmanship.
                 Bringing 25+ years of expertise in architecture, design, and sustainable construction.
               </p>
 
-              <div className="flex flex-wrap gap-3 md:gap-4 opacity-0 animate-fade-in-up pt-2 md:pt-4" style={{animationDelay: '0.6s'}}>
+              <div className="flex flex-wrap gap-3 md:gap-4 opacity-0 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
                 <Link
                   href="/portfolio"
-                  className="bg-red-700 hover:bg-red-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm md:text-base"
+                  className="bg-red-700 hover:bg-red-800 text-white px-5 md:px-8 py-2.5 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm md:text-base"
                 >
                   View All Projects
                 </Link>
                 <Link
                   href="/contact"
-                  className="bg-white hover:bg-gray-100 text-gray-900 px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm md:text-base"
+                  className="bg-white hover:bg-gray-100 text-gray-900 px-5 md:px-8 py-2.5 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm md:text-base"
                 >
                   Get in Touch
                 </Link>
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex gap-6 md:gap-8 pt-4 md:pt-8 opacity-0 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+              <div className="flex gap-6 md:gap-8 pt-2 md:pt-8 opacity-0 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
                 <div className="border-l-4 border-red-700 pl-3 md:pl-4">
                   <p className="text-xl md:text-2xl font-bold text-white">25+</p>
                   <p className="text-gray-400 text-xs md:text-sm">Years Experience</p>
@@ -148,13 +148,13 @@ export default function Home() {
             </div>
 
             {/* Right Carousel Section */}
-            <div className="relative opacity-0 animate-slide-in-right mt-4 md:mt-0" style={{animationDelay: '0.5s'}}>
-              <div className="relative">
-                {/* Glowing Border Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-xl blur opacity-30 animate-glow"></div>
+            <div className="relative opacity-0 animate-fade-in-up md:animate-slide-in-right mt-2 md:mt-0" style={{animationDelay: '0.5s'}}>
+              <div className="relative overflow-hidden rounded-xl">
+                {/* Glowing Border Effect - desktop only */}
+                <div className="hidden md:block absolute -inset-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-xl blur opacity-30 animate-glow"></div>
 
                 {/* Carousel Container */}
-                <div className="relative bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden p-3 md:p-6">
+                <div className="relative bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden p-2 md:p-6">
                   <Carousel images={showcaseProjects} />
                 </div>
               </div>

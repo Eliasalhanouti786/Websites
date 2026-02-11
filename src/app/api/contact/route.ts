@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: `AMEX Website <${process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev"}>`,
-      to: "Eamonn@amexltd.co.uk",
+      to: process.env.CONTACT_EMAIL || "Eamonn@amexltd.co.uk",
       subject: `New Inquiry: ${projectLabel} - from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
