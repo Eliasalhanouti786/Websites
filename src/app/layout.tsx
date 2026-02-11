@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AMEX Construction | Expert Design & Full Home Refurbishment",
-  description: "Expert design and full home refurbishment services by Ayman Alhanouti. Portfolio of premium construction and interior design projects.",
+  description: "Expert design and full home refurbishment services. Portfolio of premium construction and interior design projects.",
 };
 
 export default function RootLayout({
