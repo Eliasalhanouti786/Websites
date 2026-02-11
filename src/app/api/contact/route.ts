@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import twilio from "twilio";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
     const { name, email, phone, projectType, message } = await request.json();
@@ -27,6 +25,7 @@ export async function POST(request: NextRequest) {
     const projectLabel = projectLabels[projectType] || projectType;
 
     // Send email via Resend
+    const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: `AMEX Website <${process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev"}>`,
       to: "Eamonn@amexltd.co.uk",
