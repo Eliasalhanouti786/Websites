@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4">AMEX Construction</h3>
             <p className="text-gray-400 text-sm">
-              Expert design and full home refurbishment by Eamonn.
+              Expert design and full home refurbishment services.
             </p>
           </div>
 

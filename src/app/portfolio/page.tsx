@@ -10,16 +10,16 @@ export default function Portfolio() {
       projects: [
         { src: "/images/project-01-marble-kitchen.jpg", alt: "Modern Marble Kitchen" },
         { src: "/images/project-08-luxury-kitchen.jpg", alt: "Luxury Kitchen Design" },
-        { src: "/images/project-09-galley-kitchen.jpg", alt: "Galley Kitchen" },
         { src: "/images/project-07-kitchen-bathroom.jpg", alt: "Kitchen & Bathroom" },
+        { src: "/images/project-09-galley-kitchen.jpg", alt: "Galley Kitchen" },
         { src: "/images/project-15-kitchen-design.jpg", alt: "Premium Kitchen" },
+        { src: "/images/project-16-kitchen-modern.jpg", alt: "Modern Kitchen" },
         { src: "/images/project-21-kitchen-grey.jpg", alt: "Grey Kitchen Design" },
         { src: "/images/project-22-kitchen-white.jpg", alt: "White Kitchen" },
         { src: "/images/project-23-modern-kitchen.jpg", alt: "Modern Kitchen" },
         { src: "/images/project-25-kitchen-island.jpg", alt: "Kitchen Island Design" },
         { src: "/images/project-28-kitchen-grey2.jpg", alt: "Grey Kitchen Suite" },
         { src: "/images/project-34-kitchen-chef.jpg", alt: "Chef's Kitchen" },
-        { src: "/images/project-38-kitchen-dining.jpg", alt: "Kitchen & Dining" },
         { src: "/images/project-41-kitchen-marble.jpg", alt: "Marble Kitchen" },
         { src: "/images/project-49-kitchen-premium.jpg", alt: "Premium Kitchen Suite" },
       ]
@@ -34,10 +34,11 @@ export default function Portfolio() {
         { src: "/images/project-12-extension-exterior.jpg", alt: "Extension Exterior" },
         { src: "/images/project-13-brick-extension.jpg", alt: "Brick Extension" },
         { src: "/images/project-17-extension-interior.jpg", alt: "Extension Interior" },
-        { src: "/images/project-18-extension-interior2.jpg", alt: "Extension Interior 2" },
+        { src: "/images/project-18-extension-interior2.jpg", alt: "Extension Interior" },
         { src: "/images/project-19-glass-sliding.jpg", alt: "Glass Sliding Doors" },
         { src: "/images/project-20-open-plan-glass.jpg", alt: "Open Plan with Glass" },
         { src: "/images/project-27-open-plan-living.jpg", alt: "Open Plan Living" },
+        { src: "/images/project-35-extension-exterior.jpg", alt: "Extension Exterior" },
         { src: "/images/project-36-open-plan.jpg", alt: "Contemporary Open Plan" },
         { src: "/images/project-37-extension-interior.jpg", alt: "Premium Extension" },
         { src: "/images/project-39-modern-extension.jpg", alt: "Modern Extension Design" },
@@ -54,6 +55,7 @@ export default function Portfolio() {
         { src: "/images/project-14-dining-area.jpg", alt: "Dining Area" },
         { src: "/images/project-32-entertainment-space.jpg", alt: "Entertainment Space" },
         { src: "/images/project-33-kitchen-living.jpg", alt: "Kitchen Living Area" },
+        { src: "/images/project-38-kitchen-dining.jpg", alt: "Kitchen & Dining" },
         { src: "/images/project-45-open-plan-dining.jpg", alt: "Open Plan Dining" },
         { src: "/images/project-50-living-space.jpg", alt: "Living Space Design" },
       ]
@@ -63,7 +65,6 @@ export default function Portfolio() {
       description: "Energy-efficient installations and sustainable design",
       projects: [
         { src: "/images/project-05-solar-panels-roof.jpg", alt: "Solar Panel Installation" },
-        { src: "/images/project-29-extension-solar.jpg", alt: "Solar on Extension" },
         { src: "/images/project-43-solar-panels.jpg", alt: "Solar Panels" },
         { src: "/images/project-44-solar-aerial.jpg", alt: "Aerial Solar View" },
         { src: "/images/project-47-solar-panels2.jpg", alt: "Solar Panel Array" },
@@ -77,7 +78,6 @@ export default function Portfolio() {
         { src: "/images/project-26-kitchen-modern2.jpg", alt: "Modern Refurb Kitchen" },
         { src: "/images/project-30-kitchen-sink.jpg", alt: "Kitchen Workspace" },
         { src: "/images/project-31-stairs.jpg", alt: "Stair Refurbishment" },
-        { src: "/images/project-35-extension-exterior.jpg", alt: "Refurb Exterior" },
         { src: "/images/project-40-kitchen-white2.jpg", alt: "White Kitchen Refurb" },
         { src: "/images/project-42-kitchen-contemporary.jpg", alt: "Contemporary Refurb" },
         { src: "/images/project-46-kitchen-narrow.jpg", alt: "Kitchen Space Planning" },
@@ -124,7 +124,7 @@ export default function Portfolio() {
                           fill
                           className="object-cover group-hover:brightness-110 transition-all duration-300"
                         />
-                        
+
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-start p-4">
                           <p className="text-white font-semibold text-sm">{project.alt}</p>
