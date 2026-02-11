@@ -88,36 +88,36 @@ export default function Portfolio() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-r from-gray-900 to-red-900 text-white py-16">
+      <section className="bg-gradient-to-r from-gray-900 to-red-900 text-white py-10 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-black mb-4">Our Portfolio</h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
+          <h1 className="text-3xl md:text-5xl font-black mb-3 md:mb-4">Our Portfolio</h1>
+          <p className="text-base md:text-xl text-gray-200 max-w-3xl">
             Browse our extensive collection of completed projects showcasing our expertise in design, refurbishment, extensions, and sustainable solutions.
           </p>
         </div>
       </section>
 
       {/* Project Sections */}
-      <section className="py-20">
+      <section className="py-10 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-32">
+          <div className="space-y-16 md:space-y-32">
             {projectSections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 {/* Section Header */}
-                <div className="mb-12">
-                  <h2 className="text-4xl font-black text-gray-900 mb-3">{section.title}</h2>
-                  <p className="text-xl text-gray-600">{section.description}</p>
-                  <div className="w-20 h-1 bg-red-700 mt-4"></div>
+                <div className="mb-6 md:mb-12">
+                  <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-2 md:mb-3">{section.title}</h2>
+                  <p className="text-base md:text-xl text-gray-600">{section.description}</p>
+                  <div className="w-16 md:w-20 h-1 bg-red-700 mt-3 md:mt-4"></div>
                 </div>
 
                 {/* Project Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
                   {section.projects.map((project, projectIdx) => (
                     <div
                       key={projectIdx}
                       className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer bg-gray-100"
                     >
-                      <div className="relative w-full h-64 md:h-72">
+                      <div className="relative w-full h-40 sm:h-52 md:h-72">
                         <Image
                           src={project.src}
                           alt={project.alt}
@@ -140,15 +140,15 @@ export default function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">Inspired by What You See?</h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-black mb-3 md:mb-4">Inspired by What You See?</h2>
+          <p className="text-base md:text-xl mb-6 md:mb-8 text-blue-100 max-w-2xl mx-auto">
             Schedule a consultation to discuss your next project
           </p>
           <a
             href="/contact"
-            className="bg-red-700 hover:bg-red-800 text-white px-10 py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 inline-block shadow-lg"
+            className="bg-red-700 hover:bg-red-800 text-white px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 inline-block shadow-lg text-sm md:text-base"
           >
             Get Your Free Consultation
           </a>
