@@ -70,13 +70,29 @@ export default function Carousel({ images }: CarouselProps) {
         </button>
       </div>
 
-      {/* Thumbnail Navigation */}
-      <div className="flex gap-2 md:gap-3 mt-3 md:mt-6 overflow-x-auto pb-2">
+      {/* Dot Navigation (mobile) */}
+      <div className="flex md:hidden justify-center gap-1.5 mt-3 flex-wrap">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all ${
+              index === currentIndex
+                ? 'bg-red-600 scale-125'
+                : 'bg-gray-400 opacity-50'
+            }`}
+            aria-label={`Go to project ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Thumbnail Navigation (desktop) */}
+      <div className="hidden md:flex gap-3 mt-6 overflow-x-auto pb-2">
         {images.map((image, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`flex-shrink-0 relative w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-md md:rounded-lg overflow-hidden border-2 transition-all ${
+            className={`flex-shrink-0 relative w-24 h-24 rounded-lg overflow-hidden border-2 transition-all ${
               index === currentIndex
                 ? 'border-cc0000 scale-105'
                 : 'border-gray-300 hover:border-cc0000 opacity-70 hover:opacity-100'

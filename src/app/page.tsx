@@ -98,7 +98,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero-gradient relative min-h-[80vh] md:min-h-screen flex items-center overflow-hidden py-12 md:py-0">
+      <section className="hero-gradient relative min-h-[80vh] md:min-h-screen flex items-center overflow-x-hidden overflow-y-hidden py-12 md:py-0">
         {/* Animated Background Elements */}
         <div className="absolute top-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-red-700 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '0s'}}></div>
         <div className="absolute bottom-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-blue-900 opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
@@ -109,7 +109,7 @@ export default function Home() {
             {/* Left Content */}
             <div className="space-y-6 md:space-y-8">
               <div className="space-y-4 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
+                <h1 className="text-3xl sm:text-5xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
                   Expert Design & Full Home Refurbishment
                 </h1>
               </div>
