@@ -22,8 +22,11 @@ export default function About() {
           </div>
           <div>
             <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900">
-              Lead Designer & Project Manager
+              Meet Eamonn
             </h2>
+            <p className="text-base md:text-lg text-gray-500 mb-2">
+              Lead Designer & Project Manager
+            </p>
             <p className="text-lg md:text-xl text-red-700 font-semibold mb-4 md:mb-6">
               AMEX Construction and Developments Limited
             </p>
